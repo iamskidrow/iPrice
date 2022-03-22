@@ -7,6 +7,22 @@ headers = {
 }
 
 
+def get_price(links):
+    for i in links:
+
+        if "amazon" in links[i]:
+            print("[₹{price}] Amazon".format(price=amazon(links[i])))
+
+        if "flipkart" in links[i]:
+            print("[₹{price}] Flipkart".format(price=flipkart(links[i])))
+
+        if "imagineonline" in links[i]:
+            print("[₹{price}] Imagineonline".format(price=imagineonline(links[i])))
+
+        if "reliancedigital" in links[i]:
+            print("[₹{price}] Reliancedigital".format(price=reliancedigital(links[i])))
+
+
 # def apple(url):
 
 
