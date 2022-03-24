@@ -45,7 +45,7 @@ def flipkart(url):
 
 def imagineonline(url):
     soup = BeautifulSoup(requests.get(url, headers=headers).text, 'html.parser')
-    req = soup.find_all('span', "price on-sale")
+    req = soup.find_all('span', attrs={"itemprop": "price"})
     for final in req:
         return final.text.strip()[4:]
 
